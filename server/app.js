@@ -33,10 +33,10 @@ app.use(express.static('public'));
 app.use(parser.urlencoded({extended: false}));
 app.use(parser.json());
 
-app.use('/checkout',checkout);
-app.use('/merchantHosted',merchantHosted);
-app.use('/seamlessBasic',seamlessBasic);
-app.use('/seamlessPro',seamlessPro);
+app.use('/checkout/',checkout);
+app.use('/merchantHosted/',merchantHosted);
+app.use('/seamlessBasic/',seamlessBasic);
+app.use('/seamlessPro/',seamlessPro);
 
 /*
 app.get('/index/index' , (req, res, next)=>{
@@ -157,7 +157,7 @@ app.use((err, req , res , next)=>{
     });
 })
 
-app.listen('3000', ()=>{
+app.listen('8809', ()=>{
     console.log("server running");
     console.log("config is", config);
 })
